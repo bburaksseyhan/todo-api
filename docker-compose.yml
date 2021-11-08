@@ -9,7 +9,7 @@ services:
       - 8080:8080
     restart: unless-stopped
     depends_on:
-      - cassandra
+      - cassandradb
 
   cassandradb:
     image: cassandra:latest
