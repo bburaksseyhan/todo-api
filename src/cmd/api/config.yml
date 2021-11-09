@@ -1,5 +1,5 @@
 database:
-  url: "localhost"
+  url: "127.0.0.1"
   keyspace: "todo"
 
 host:
