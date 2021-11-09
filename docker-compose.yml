@@ -8,7 +8,7 @@ services:
       - 8080:8080
     restart: unless-stopped
     environment:
-      - Cassandra_URL=cassandra:9042
+      - Cassandra_URL=127.0.0.1
     links:
       - cassandra
     depends_on:
