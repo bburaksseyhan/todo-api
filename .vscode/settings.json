@@ -1,0 +1,12 @@
+{
+    "sqltools.connections": [
+        {
+            "server": "localhost",
+            "port": 9042,
+            "previewLimit": 50,
+            "driver": "Cassandra",
+            "name": "test",
+            "password": ""
+        }
+    ]
+}
