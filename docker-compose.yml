@@ -1,19 +1,6 @@
 version: '3.4'
 
 services:
-  todoapi:
-    build:
-      context: https://github.com/bburaksseyhan/todo-api.git#main
-    ports:
-      - 8080:8080
-    restart: unless-stopped
-    environment:
-      - Cassandra_URL=cassandra
-    links:
-      - cassandra
-    depends_on:
-      - cassandra
-
   cassandra:
     image: cassandra:latest
     container_name: cassandra
