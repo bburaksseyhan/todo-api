@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/bburaksseyhan/todo-api/src/cmd/utils"
 	api "github.com/bburaksseyhan/todo-api/src/pkg/api"
 	log "github.com/labstack/gommon/log"
@@ -8,7 +10,17 @@ import (
 )
 
 func main() {
-	api.Initialize(read())
+
+	config := read()
+
+	url := os.Getenv("Cassandra_URL")
+	if url != "" {
+		config.Database.Url = url
+	}
+
+	log.Info("Cassandra_URL", url)
+
+	api.Initialize(config)
 }
 
 func read() utils.Configuration {

@@ -1,3 +1,6 @@
 database:
-  url: "cassandra"
+  url: "localhost"
   keyspace: "todo"
+
+host:
+  port: "8080"

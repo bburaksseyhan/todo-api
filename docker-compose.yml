@@ -7,6 +7,8 @@ services:
     ports:
       - 8080:8080
     restart: unless-stopped
+    environment:
+      - Cassandra_URL=cassandra
     links:
       - cassandra
     depends_on:

@@ -25,9 +25,9 @@ func Initialize(config utils.Configuration) {
 
 	router.GET("/ping", orderHandler.HealthCheck)
 
-	router.POST("/", orderHandler.CreateTodo)
+	router.POST("api/v1/todo/", orderHandler.CreateTodo)
 	router.GET("api/v1/todo/:id", orderHandler.GetTodoById)
 
 	//run the server :8080
-	router.Run(":8080")
+	router.Run(":" + config.Host.Port + "")
 }
