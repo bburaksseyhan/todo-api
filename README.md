@@ -1,5 +1,6 @@
 [![Go Doc](https://godoc.org/github.com/gogf/gf?status.svg)](https://godoc.org/github.com/gogf/gf)
 [![Go Report Card](https://goreportcard.com/badge/github.com/bburaksseyhan/todo-api)](https://goreportcard.com/report/github.com/bburaksseyhan/todo-api)
+[![GitHub stars](https://img.shields.io/github/stars/bburaksseyhan/todo-api)](https://github.com/bburaksseyhan/todo-api/stargazers)
 
 # todo-api
 
