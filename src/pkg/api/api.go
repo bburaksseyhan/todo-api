@@ -10,6 +10,11 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+/*
+   Initialize GIN Web Framework and prepare routing
+   Connect to Cassandra Client,
+   Register to Repository and Handler
+*/
 func Initialize(config utils.Configuration) {
 
 	// Creates a gin router with default middleware:

@@ -23,6 +23,7 @@ func main() {
 	api.Initialize(config)
 }
 
+// read configuration file from config.yml via Viper
 func read() utils.Configuration {
 	//Set the file name of the configurations file
 	viper.SetConfigName("config")

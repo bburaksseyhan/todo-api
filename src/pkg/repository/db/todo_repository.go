@@ -6,6 +6,10 @@ import (
 	"github.com/gocql/gocql"
 )
 
+/*
+    Save method take model.Todo return *model.Todo, error
+	GetById take id parameter return *model.Todo, error
+*/
 type TodoRepository interface {
 	Save(todo model.Todo) (*model.Todo, error)
 	GetById(id string) (*model.Todo, error)
@@ -15,6 +19,7 @@ type todoRepository struct {
 	session *gocql.Session
 }
 
+// NewTodoRepository take session which is use for repository implementation
 func NewTodoRepository(session *gocql.Session) TodoRepository {
 	return &todoRepository{session: session}
 }

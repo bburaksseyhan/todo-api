@@ -1,10 +1,7 @@
 package utils
 
 import (
-	"errors"
 	"net/http"
-
-	"github.com/labstack/gommon/log"
 )
 
 type RestErr struct {
@@ -13,14 +10,8 @@ type RestErr struct {
 	Error   string `json:"error"`
 }
 
-func NewError(message string) error {
-	return errors.New(message)
-}
-
+// custom error handling return RestErr with bad_request status and messages
 func BadRequestError(message string, err error) *RestErr {
-
-	log.Error(err)
-
 	return &RestErr{
 		Message: message,
 		Status:  http.StatusBadRequest,
@@ -28,9 +19,8 @@ func BadRequestError(message string, err error) *RestErr {
 	}
 }
 
+// custom error handling return RestErr with not_found status and messages
 func NotFoundRequestError(message string, err error) *RestErr {
-	log.Error(err)
-
 	return &RestErr{
 		Message: message,
 		Status:  http.StatusNotFound,
@@ -38,10 +28,8 @@ func NotFoundRequestError(message string, err error) *RestErr {
 	}
 }
 
+//mcustom error handling return RestErr with internal_server status and messages
 func InternalServerError(message string, err error) *RestErr {
-
-	log.Error(err)
-
 	return &RestErr{
 		Message: message,
 		Status:  http.StatusInternalServerError,
