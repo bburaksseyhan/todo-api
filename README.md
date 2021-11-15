@@ -3,7 +3,7 @@
 
 # todo-api
 
-
+run on docker :ship:
 ```
  docker-compose up -d  
 ```
@@ -25,5 +25,12 @@ create table todo (id text primary key, title text, content text);
 
 select * from todo
 ```
+
+used packages :package:
+
+- [ ] Web framework: go get -u github.com/gin-gonic/gin
+- [ ] Read Configuration file : go get -u github.com/spf13/viper
+- [ ] Logging : go get -u github.com/sirupsen/logrus
+- [ ] Cassandra : go get -u github.com/gocql/gocql
 
 documentation: [Related Post](https://dev.to/bseyhan/cassandra-golang-551a). :pencil2: :book:
