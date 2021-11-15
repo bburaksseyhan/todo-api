@@ -1,5 +1,6 @@
 # todo-api
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/bburaksseyhan/todo-api)](https://goreportcard.com/report/github.com/bburaksseyhan/todo-api)
 
 ```
  docker-compose up -d  
