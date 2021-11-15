@@ -12,10 +12,7 @@ import (
 	"github.com/google/uuid"
 )
 
-/*
-    todohandler repository that is use for api.go file
-	methods take *gin.Context parameter
-*/
+// TodoHandler repository that is use for api.go filemethods take *gin.Context parameter
 type TodoHandler interface {
 	CreateTodo(*gin.Context)
 	GetTodoById(*gin.Context)
@@ -27,7 +24,7 @@ type todoHandler struct {
 	repo database.TodoRepository
 }
 
-// todoHandler
+// NewTodoHandler is a create new todoHandler struct
 func NewTodoHandler(repo *database.TodoRepository) TodoHandler {
 	return &todoHandler{repo: *repo}
 }

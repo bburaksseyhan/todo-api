@@ -10,7 +10,7 @@ type RestErr struct {
 	Error   string `json:"error"`
 }
 
-// custom error handling return RestErr with bad_request status and messages
+// BadRequestError return RestErr with bad_request status and messages
 func BadRequestError(message string, err error) *RestErr {
 	return &RestErr{
 		Message: message,
@@ -19,7 +19,7 @@ func BadRequestError(message string, err error) *RestErr {
 	}
 }
 
-// custom error handling return RestErr with not_found status and messages
+// NotFoundRequestError return RestErr with not_found status and messages
 func NotFoundRequestError(message string, err error) *RestErr {
 	return &RestErr{
 		Message: message,
@@ -28,7 +28,7 @@ func NotFoundRequestError(message string, err error) *RestErr {
 	}
 }
 
-//mcustom error handling return RestErr with internal_server status and messages
+//mcustom error return RestErr with internal_server status and messages
 func InternalServerError(message string, err error) *RestErr {
 	return &RestErr{
 		Message: message,
