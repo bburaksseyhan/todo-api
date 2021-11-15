@@ -1,6 +1,8 @@
+[![Go Doc](https://godoc.org/github.com/gogf/gf?status.svg)](https://godoc.org/github.com/gogf/gf)
+[![Go Report Card](https://goreportcard.com/badge/github.com/bburaksseyhan/todo-api)](https://goreportcard.com/report/github.com/bburaksseyhan/todo-api)
+
 # todo-api
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/bburaksseyhan/todo-api)](https://goreportcard.com/report/github.com/bburaksseyhan/todo-api)
 
 ```
  docker-compose up -d  
@@ -23,3 +25,5 @@ create table todo (id text primary key, title text, content text);
 
 select * from todo
 ```
+
+documentation: [Related Post](https://dev.to/bseyhan/cassandra-golang-551a). :pencil2: :book:
